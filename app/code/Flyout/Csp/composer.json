@@ -1,0 +1,24 @@
+{
+    "name": "flyout/module-csp",
+    "description": "Habilitar recursos de CSP",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "authors":[
+        {
+            "name":"Ismael",
+            "email":"contato@flyout.com.br"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Flyout\\Csp\\": ""
+        }
+    }
+}

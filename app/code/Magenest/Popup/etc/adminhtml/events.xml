@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="save_template">
+        <observer name="set_html_content_popup" instance="Magenest\Popup\Observer\SetHtmlContentPopup"/>
+    </event>
+</config>

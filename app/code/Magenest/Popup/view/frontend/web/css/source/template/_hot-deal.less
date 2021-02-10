@@ -1,0 +1,402 @@
+& when (@media-common = true) {
+    #bio_ep {
+        //== [ Popup template hotdeals has slick ]
+        &.popup-default-40,
+        &.popup-default-41 {
+            .popup-product-hotdeals {
+                position: relative;
+
+                .block-products-list {
+                    > .block-content {
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    }
+                }
+
+                .slick-list {
+                    margin-bottom: -55px;
+
+                    .slick-track {
+                        margin: 0;
+                        padding-bottom: 55px;
+                    }
+
+                    .slick-slide {
+
+                        > div {
+                            display: -webkit-inline-flex;
+                            display: -ms-inline-flexbox;
+                            display: inline-flex;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .product-item {
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .slick-arrow {
+                    width: auto;
+                    height: auto;
+                    margin-top: -27.5px;
+
+                    &:before {
+                        content: '';
+                        font-family: FontAwesome;
+                        font-size: 34px;
+                        font-weight: 300;
+                        color: #ffffff;
+                        filter: alpha(opacity=100);
+                        -moz-opacity: 1;
+                        opacity: 1;
+                    }
+
+                    &.slick-prev {
+                        left: -50px;
+
+                        &:before {
+                            content: '\f053';
+                        }
+                    }
+
+                    &.slick-next {
+                        right: -50px;
+
+                        &:before {
+                            content: '\f054';
+                        }
+                    }
+                }
+            }
+
+            &.popup-top-center {
+                text-transform: unset;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+
+        //== [ Popup template 40 ]
+        &.popup-default-40 {
+            width: 100%;
+            max-width: 1200px !important;
+            @media (max-width: 1199px) {
+                overflow: auto;
+            }
+
+            .magenest-popup-inner {
+                padding: 15px;
+                background-color: transparent;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                @media (min-width: 768px) {
+                    padding: 30px;
+                }
+            }
+
+            #bio_ep_close {
+                top: 0;
+                right: 10%;
+                color: #ffffff;
+            }
+
+            #copyright {
+                display: none;
+            }
+
+            .popup-content-wrapper {
+                .popup-step-1 {
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                    border-radius: 15px;
+                    padding: 30px 100px;
+                    position: relative;
+
+                    &:before, &:after {
+                        content: '';
+                        display: block;
+                        width: calc(~'100% - 30px');
+                        position: absolute;
+                    }
+
+                    &:before {
+                        background: #f6c329;
+                        top: -15px;
+                        left: -15px;
+                        bottom: 0;
+                        right: 0;
+                        @media (min-width: 768px) {
+                            top: -30px;
+                            left: -30px;
+                        }
+                    }
+
+                    &:after {
+                        background: #32667d;
+                        top: 0;
+                        left: 0;
+                        right: -15px;
+                        bottom: -15px;
+                        @media (min-width: 768px) {
+                            right: -30px;
+                            bottom: -30px;
+                        }
+                    }
+
+                    .popup-product-hotdeals {
+                        margin-left: -15px;
+                        z-index: 1;
+
+                        @media (min-width: 768px) {
+                            margin-left: -30px;
+                            padding: 20px 20px 30px;
+                            .popup-title {
+                                font-size: 44px;
+                            }
+                        }
+
+                        .popup-title {
+                            margin-bottom: 25px;
+                            text-align: center;
+                            font-size: 5.736636245vw;
+                            font-weight: 600;
+                            color: #fff;
+                            line-height: normal;
+                        }
+
+                        .popup-product {
+                            .block {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //== [ Popup template 41 ]
+        &.popup-default-41 {
+            width: 100%;
+            @media (min-width: 1200px) {
+                max-width: 1200px !important;
+                margin-bottom: 0;
+            }
+            .magenest-popup-inner {
+                padding: 30px 8.34028357vw 0;
+                background-color: #D03D38;
+                background-image: url("../Magenest_Popup/images/hotdeals-bg.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                @media (min-width: 1200px) {
+                    padding: 50px 175px 0;
+                }
+            }
+
+            #bio_ep_close {
+                color: #ffffff;
+                @media (min-width: 768px) {
+                    top: 40px;
+                    right: 40px;
+
+                    &:before {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .popup-content-wrapper {
+                .popup-step-1 {
+                    .popup-title {
+                        position: relative;
+                        margin-bottom: 30px;
+                        text-align: center;
+
+                        .title {
+                            display: inline-block;
+                            font-size: 5.838198499vw;
+                            line-height: normal;
+                            color: #ffffff;
+                            @media (min-width: 1200px) {
+                                font-size: 70px;
+                            }
+
+                            &:before, &:after {
+                                content: '';
+                                display: inline-block;
+                                width: 39px;
+                                height: 39px;
+                                background-image: url("../Magenest_Popup/images/hotdeals-fire.svg");
+                                background-size: cover;
+                            }
+
+                            &:before {
+                                margin-right: 15px;
+                            }
+
+                            &:after {
+                                margin-left: 15px;
+                            }
+
+                            span {
+                                color: #FED300;
+                            }
+                        }
+
+                        .desc {
+                            display: block;
+                            max-width: 500px;
+                            margin: auto;
+                            font-size: 18px;
+                            color: #ffffff;
+                        }
+                    }
+
+                    .block.widget {
+                        margin-bottom: 0;
+                    }
+
+                    .slick-list {
+                        padding-bottom: 50px;
+                    }
+
+                    .slick-arrow {
+                        margin-top: -62px;
+                    }
+                }
+            }
+        }
+
+        //== [ Hide Pagination ]
+        .pager {
+            display: none !important;
+        }
+    }
+}
+
+@keyframes left-36 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(3000px, -50%, 0);
+        transform: translate3d(3000px, -50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes right-36 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, -50%, 0);
+        transform: translate3d(-3000px, -50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes right-36 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-3000px, -50%, 0);
+        transform: translate3d(-3000px, -50%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 1024px) {
+    #bio_ep {
+        &.popup-default-40 {
+            .popup-content-wrapper {
+                .popup-step-1 {
+                    padding: 30px 70px;
+                }
+            }
+        }
+
+        &.popup-default-41 {
+            background-size: contain;
+            background-position: bottom center;
+            overflow-y: auto;
+
+            .popup-content-wrapper {
+                .popup-step-1 {
+                    .popup-title {
+                        .title {
+                            margin-bottom: 10px;
+
+                            &:before, &:after {
+                                width: 20px;
+                                height: 20px;
+                            }
+
+                            &:before {
+                                margin-right: 10px;
+                            }
+
+                            &:after {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    .slick-list {
+                        margin: 0 -15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    #bio_ep {
+        &.popup-default-40 {
+            overflow: auto;
+
+            .popup-content-wrapper {
+                .popup-step-1 {
+                    padding: 30px;
+                }
+
+                .products-grid {
+                    margin-left: -7.5px;
+                }
+            }
+        }
+
+        &.popup-default-41 {
+            #copyright {
+                display: none;
+            }
+
+            .popup-content-wrapper {
+                .popup-step-1 {
+                    .popup-title {
+                        .desc {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

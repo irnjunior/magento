@@ -1,0 +1,5 @@
+<?php if(($block->checkEnableButton()) && $block->checkStoreButton()): ?>
+    <div id="<?= $block->setButtonId() ?>" class="action-btn-popup" style="<?= $block->styleButton() ?>;">
+        <span><?= $block->getButtonContent() ?></span>
+    </div>
+<?php endif; ?>

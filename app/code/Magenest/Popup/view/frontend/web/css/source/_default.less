@@ -1,0 +1,126 @@
+& when (@media-common = true) {
+    html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 10px;
+
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+    }
+
+    input {
+        &:focus {
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    button {
+        border: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        &:focus {
+            border: 0;
+        }
+
+        &:hover {
+            border: 0;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+
+        &:not(.primary) {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    .action-btn-popup {
+        display: inline-block;
+        padding: 7px 25px;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:before, &:after {
+            content: '';
+            background: rgba(255, 255, 255, .4);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            filter: alpha(opacity=0);
+            -moz-opacity: 0;
+            opacity: 0;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &:before {
+            animation: pulse 1.5s infinite linear;
+        }
+
+        &:after {
+            animation: pulse 2s .4s infinite linear;
+        }
+
+        &:hover {
+            &:before, &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    33% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

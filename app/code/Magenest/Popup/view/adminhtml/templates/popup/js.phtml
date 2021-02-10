@@ -1,0 +1,303 @@
+<?php
+/** @var \Magenest\Popup\Block\Adminhtml\Popup\Edit\Js $block */
+?>
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function () {
+            // cookie lifetime
+            $('.field-cookie_lifetime').attr('style', 'display: none;');
+            var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+            if (enable_cookie_lifetime == 1) {
+                $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+            } else {
+                $('#popup_cookie_lifetime').val('1');
+                $('.field-cookie_lifetime').attr('style', 'display: none;');
+            }
+
+            $('#popup_enable_cookie_lifetime').on('change', function () {
+                var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+                if (enable_cookie_lifetime == 1) {
+                    $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+                } else {
+                    $('#popup_cookie_lifetime').val('1');
+                    $('.field-cookie_lifetime').attr('style', 'display: none;');
+                }
+            });
+
+            $('.field-thankyou_message').attr('style', 'margin-top: 30px;');
+
+            // popup trigger
+            $('.field-number_x').attr('style', 'display: none;');
+            var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+            if (popup_popup_trigger == 4) {
+                $('#popup_number_x').val('1');
+                $('.field-number_x').attr('style', 'display: none;');
+            } else {
+                $('.field-number_x').attr('style', 'display: inherit;');
+            }
+            $('#popup_popup_trigger').on('change', function () {
+                var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+                if (popup_popup_trigger == 4) {
+                    $('#popup_number_x').val('1');
+                    $('.field-number_x').attr('style', 'display: none;');
+                } else {
+                    $('.field-number_x').attr('style', 'display: inherit;');
+                }
+            });
+
+            //Coupon code, Thankyou Message add Link
+            var popup_type = $('#popup_popup_type').val() * 1;
+            if (popup_type == 5) {
+                $('.field-popup_link').attr('style', 'display: inherit;');
+                $('.field-coupon_code').attr('style', 'display: none;');
+                $('.field-thankyou_message').attr('style', 'display: none;margin-top: 30px;');
+            } else if (popup_type == 4) {
+                $('.field-popup_link').attr('style', 'display: none;');
+                $('.field-coupon_code').attr('style', 'display: inherit;');
+                $('.field-thankyou_message').attr('style', 'display: inherit;margin-top: 30px;');
+            } else if (popup_type == 2) {
+                $('.field-popup_link').attr('style', 'display: none;');
+                $('.field-coupon_code').attr('style', 'display: none;');
+                $('.field-thankyou_message').attr('style', 'display: inherit;margin-top: 30px;');
+            } else {
+                $('.field-popup_link').attr('style', 'display: none;');
+                $('.field-coupon_code').attr('style', 'display: none;');
+                $('.field-thankyou_message').attr('style', 'display: none;margin-top: 30px;');
+            }
+            $('#popup_popup_type').on('change', function () {
+                var popup_type = $('#popup_popup_type').val() * 1;
+                if (popup_type == 5) {
+                    $('.field-popup_link').attr('style', 'display: inherit;');
+                    $('.field-coupon_code').attr('style', 'display: none;');
+                    $('.field-thankyou_message').attr('style', 'display: none;margin-top: 30px;');
+                } else if (popup_type == 4) {
+                    $('.field-popup_link').attr('style', 'display: none;');
+                    $('.field-coupon_code').attr('style', 'display: inherit;');
+                    $('.field-thankyou_message').attr('style', 'display: inherit;margin-top: 30px;');
+                } else if (popup_type == 2) {
+                    $('.field-popup_link').attr('style', 'display: none;');
+                    $('.field-coupon_code').attr('style', 'display: none;');
+                    $('.field-thankyou_message').attr('style', 'display: inherit;margin-top: 30px;');
+                } else {
+                    $('.field-popup_link').attr('style', 'display: none;');
+                    $('.field-coupon_code').attr('style', 'display: none;');
+                    $('.field-thankyou_message').attr('style', 'display: none;margin-top: 30px;');
+                }
+            });
+
+            // floating button
+            var enable_floating_button = $('#popup_enable_floating_button').val() * 1;
+            if (enable_floating_button == 1) {
+                $('.field-floating_button_display_popup').attr('style', 'display:inherit;');
+                $('.field-floating_button_content').attr('style', 'display:inherit;');
+                $('.field-floating_button_position').attr('style', 'display:inherit;');
+                $('.field-floating_button_text_color').attr('style', 'display: inherit;');
+                $('.field-floating_button_background_color').attr('style', 'display: inherit;');
+
+                // floating button display popup
+                var display_popup = $('#popup_floating_button_display_popup').val() * 1;
+                if (display_popup == 0) {
+                    $('.field-popup_trigger').attr('style', 'display: inherit;');
+                    $('.field-enable_cookie_lifetime').attr('style', 'display: inherit;');
+
+                    var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+                    if (popup_popup_trigger == 4) {
+                        $('#popup_number_x').val('1');
+                        $('.field-number_x').attr('style', 'display: none;');
+                    } else {
+                        $('.field-number_x').attr('style', 'display: inherit;');
+                    }
+
+                    var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+                    if (enable_cookie_lifetime == 1) {
+                        $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+                    } else {
+                        $('#popup_cookie_lifetime').val('1');
+                        $('.field-cookie_lifetime').attr('style', 'display: none;');
+                    }
+                } else {
+                    $('.field-popup_trigger').attr('style', 'display: none;');
+                    $('.field-number_x').attr('style', 'display: none;');
+                    $('.field-enable_cookie_lifetime').attr('style', 'display: none;');
+                    $('.field-cookie_lifetime').attr('style', 'display: none;');
+                    $('#popup_popup_trigger').val('1');
+                    $('#popup_enable_cookie_lifetime').val('0');
+                }
+
+                $('#popup_floating_button_display_popup').on('change', function () {
+                    var display_popup = $('#popup_floating_button_display_popup').val() * 1;
+                    if (display_popup == 0) {
+                        $('.field-popup_trigger').attr('style', 'display: inherit;');
+                        $('#popup_number_x').val('1');
+                        $('.field-enable_cookie_lifetime').attr('style', 'display: inherit;');
+
+                        var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+                        if (popup_popup_trigger == 4) {
+                            $('#popup_number_x').val('1');
+                            $('.field-number_x').attr('style', 'display: none;');
+                        } else {
+                            $('.field-number_x').attr('style', 'display: inherit;');
+                        }
+
+                        var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+                        if (enable_cookie_lifetime == 1) {
+                            $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+                        } else {
+                            $('#popup_cookie_lifetime').val('1');
+                            $('.field-cookie_lifetime').attr('style', 'display: none;');
+                        }
+                    } else {
+                        $('.field-popup_trigger').attr('style', 'display: none;');
+                        $('.field-number_x').attr('style', 'display: none;');
+                        $('.field-enable_cookie_lifetime').attr('style', 'display: none;');
+                        $('.field-cookie_lifetime').attr('style', 'display: none;');
+                        $('#popup_popup_trigger').val('1');
+                        $('#popup_number_x').val('1');
+                        $('#popup_enable_cookie_lifetime').val('0');
+                    }
+                });
+            } else {
+                $('.field-floating_button_display_popup').attr('style', 'display: none;');
+                $('.field-floating_button_content').attr('style', 'display: none;');
+                $('.field-floating_button_position').attr('style', 'display: none;');
+                $('.field-floating_button_text_color').attr('style', 'display: none;');
+                $('.field-floating_button_background_color').attr('style', 'display: none;');
+                $('#popup_floating_button_display_popup').val('0');
+            }
+
+            $('#popup_enable_floating_button').on('change', function () {
+                var enable_floating_button = $('#popup_enable_floating_button').val() * 1;
+                if (enable_floating_button == 1) {
+                    $('.field-floating_button_display_popup').attr('style', 'display:inherit;');
+                    $('.field-floating_button_content').attr('style', 'display:inherit;');
+                    $('.field-floating_button_position').attr('style', 'display:inherit;');
+                    $('.field-floating_button_text_color').attr('style', 'display: inherit;');
+                    $('.field-floating_button_background_color').attr('style', 'display: inherit;');
+
+                    // floating button display popup
+                    var display_popup = $('#popup_floating_button_display_popup').val() * 1;
+                    if (display_popup == 0) {
+                        $('.field-popup_trigger').attr('style', 'display: inherit;');
+                        $('.field-enable_cookie_lifetime').attr('style', 'display: inherit;');
+
+                        var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+                        if (popup_popup_trigger == 4) {
+                            $('#popup_number_x').val('1');
+                            $('.field-number_x').attr('style', 'display: none;');
+                        } else {
+                            $('.field-number_x').attr('style', 'display: inherit;');
+                        }
+
+                        var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+                        if (enable_cookie_lifetime == 1) {
+                            $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+                        } else {
+                            $('#popup_cookie_lifetime').val('1');
+                            $('.field-cookie_lifetime').attr('style', 'display: none;');
+                        }
+                    } else {
+                        $('.field-popup_trigger').attr('style', 'display: none;');
+                        $('.field-number_x').attr('style', 'display: none;');
+                        $('.field-enable_cookie_lifetime').attr('style', 'display: none;');
+                        $('.field-cookie_lifetime').attr('style', 'display: none;');
+                        $('#popup_floating_button_display_popup').val('');
+                        $('#popup_popup_trigger').val('1');
+                        $('#popup_number_x').val('1');
+                        $('#popup_enable_cookie_lifetime').val('0');
+                    }
+
+                    $('#popup_floating_button_display_popup').on('change', function () {
+                        var display_popup = $('#popup_floating_button_display_popup').val() * 1;
+                        if (display_popup == 0) {
+                            $('.field-popup_trigger').attr('style', 'display: inherit;');
+                            $('#popup_number_x').val('1');
+                            $('.field-enable_cookie_lifetime').attr('style', 'display: inherit;');
+
+                            var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+                            if (popup_popup_trigger == 4) {
+                                $('#popup_number_x').val('1');
+                                $('.field-number_x').attr('style', 'display: none;');
+                            } else {
+                                $('.field-number_x').attr('style', 'display: inherit;');
+                            }
+
+                            var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+                            if (enable_cookie_lifetime == 1) {
+                                $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+                            } else {
+                                $('#popup_cookie_lifetime').val('1');
+                                $('.field-cookie_lifetime').attr('style', 'display: none;');
+                            }
+                        } else {
+                            $('.field-popup_trigger').attr('style', 'display: none;');
+                            $('.field-number_x').attr('style', 'display: none;');
+                            $('.field-enable_cookie_lifetime').attr('style', 'display: none;');
+                            $('.field-cookie_lifetime').attr('style', 'display: none;');
+                            $('#popup_popup_trigger').val('1');
+                            $('#popup_number_x').val('1');
+                            $('#popup_enable_cookie_lifetime').val('0');
+                        }
+                    });
+                } else {
+                    $('.field-floating_button_display_popup').attr('style', 'display: none;');
+                    $('.field-floating_button_content').attr('style', 'display: none;');
+                    $('.field-floating_button_position').attr('style', 'display: none;');
+                    $('.field-floating_button_text_color').attr('style', 'display: none;');
+                    $('.field-floating_button_background_color').attr('style', 'display: none;');
+                    $('.field-popup_trigger').attr('style', 'display: inherit;');
+                    $('.field-enable_cookie_lifetime').attr('style', 'display: inherit;');
+                    $('#popup_floating_button_display_popup').val('0');
+
+                    var popup_popup_trigger = $('#popup_popup_trigger').val() * 1;
+                    if (popup_popup_trigger == 4) {
+                        $('#popup_number_x').val('1');
+                        $('.field-number_x').attr('style', 'display: none;');
+                    } else {
+                        $('.field-number_x').attr('style', 'display: inherit;');
+                    }
+
+                    var enable_cookie_lifetime = $('#popup_enable_cookie_lifetime').val() * 1;
+                    if (enable_cookie_lifetime == 1) {
+                        $('.field-cookie_lifetime').attr('style', 'display: inherit;');
+                    } else {
+                        $('#popup_cookie_lifetime').val('1');
+                        $('.field-cookie_lifetime').attr('style', 'display: none;');
+                    }
+                }
+            });
+
+            // mailchimp
+            var popup_type = $('#popup_popup_type').val() * 1;
+            if (popup_type == 2 || popup_type == 4) {
+                $('.field-enable_mailchimp').attr('style', 'display: inherit;');
+            } else {
+                $('#popup_enable_mailchimp').val('0');
+                $('.field-enable_mailchimp').attr('style', 'display: none;');
+                $('.field-api_key').attr('style', 'display: none;');
+                $('.field-audience_id').attr('style', 'display: none;');
+            }
+
+            $('#popup_popup_type').on('change', function () {
+                var popup_type = $('#popup_popup_type').val() * 1;
+                if (popup_type == 2 || popup_type == 4) {
+                    $('.field-enable_mailchimp').attr('style', 'display: inherit;');
+                } else {
+                    $('#popup_enable_mailchimp').val('0');
+                    $('.field-enable_mailchimp').attr('style', 'display: none;');
+                    $('.field-api_key').attr('style', 'display: none;');
+                    $('.field-audience_id').attr('style', 'display: none;');
+                }
+            });
+
+            // preview template
+            $("#template_preview").click(function () {
+                var template_id = $('#popup_template_id').val() * 1;
+                var url_template = '<?=  $block->getUrlPreview() ?>' + template_id + '/';
+                window.open(url_template, '_blank');
+            });
+        });
+    })
+    ;
+</script>

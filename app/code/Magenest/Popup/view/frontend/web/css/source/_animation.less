@@ -1,0 +1,108 @@
+& when (@media-common = true) {
+    .magenest-popup-inner {
+        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        animation-duration: 1s;
+        &.animate__zoomOut {
+            -webkit-animation-name: mgn_zoomOut;
+            animation-name: mgn_zoomOut
+        }
+    }
+
+    // Custom animation zoomout
+    @-webkit-keyframes mgn_zoomOut {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale3d(1.6,1.6,1.6);
+            transform: scale3d(1.6,1.6,1.6)
+        }
+
+        50% {
+            opacity: 1;
+            -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1)
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1)
+        }
+    }
+
+    @keyframes mgn_zoomOut {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale3d(1.6,1.6,1.6);
+            transform: scale3d(1.6,1.6,1.6)
+        }
+
+        50% {
+            opacity: 1;
+            -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1)
+        }
+
+        to {
+            opacity: 1;
+            -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1)
+        }
+    }
+
+
+    @-webkit-keyframes text-33 {
+        from {
+            opacity: 0;
+            position: relative;
+            left: -2000px;
+        }
+        to {
+            opacity: 1;
+            position: relative;
+            left: 0;
+        }
+    }
+
+    @keyframes text-33 {
+        from {
+            opacity: 0;
+            position: relative;
+            left: -2000px;
+        }
+        to {
+            opacity: 1;
+            position: relative;
+            left: 0;
+        }
+    }
+
+    @-webkit-keyframes action-33 {
+        from {
+            opacity: 0;
+            position: relative;
+            right: -2000px;
+        }
+        to {
+            opacity: 1;
+            position: relative;
+            right: 0;
+        }
+    }
+
+    @keyframes action-33 {
+        from {
+            opacity: 0;
+            position: relative;
+            right: -2000px;
+        }
+        to {
+            opacity: 1;
+            position: relative;
+            right: 0;
+        }
+    }
+}
+
+

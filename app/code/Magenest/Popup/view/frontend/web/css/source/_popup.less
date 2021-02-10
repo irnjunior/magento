@@ -1,0 +1,332 @@
+@color-white: #fff;
+& when (@media-common = true) {
+    #bio_ep {
+        display: none;
+        position: fixed;
+        max-width: 90vw;
+        max-height: 90vh;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 16px;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 10002;
+        .magenest-popup-inner {
+            position: relative;
+            background-color: #fff;
+            -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+            -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+            box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            max-height: 90vh;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            //color: #fff;
+
+            &:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            &:active {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            &:visited {
+                //color: #fff;
+            }
+        }
+
+        textarea {
+            &:focus {
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    #bio_ep_bg {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 10001;
+        filter: alpha(opacity=70) !important;
+        -moz-opacity: 0.7 !important;
+        opacity: 0.7 !important;
+        &.popup-bg-3 {
+            filter: alpha(opacity=92) !important;
+            -moz-opacity: 0.92 !important;
+            opacity: 0.92 !important;
+        }
+        &.popup-bg-none {
+            filter: alpha(opacity=0) !important;
+        }
+    }
+
+    button {
+        &:not(.primary):active {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            border: 0;
+        }
+    }
+
+    .magenest-popup-step {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .popup-content {
+        max-height: calc(~'90vh - 24px');
+        overflow: auto;
+    }
+
+    .popup-step-1 {
+        padding-bottom: 24px;
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+
+    .popup-step-2 {
+        padding-bottom: 24px;
+        overflow: hidden;
+        height: 400px;
+        max-height: 90vh;
+        font-size: 20px;
+        position: relative;
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 0 15px;
+            text-align: center;
+        }
+    }
+
+    .popup-coupon {
+        .coupon {
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    .text-label {
+        display: none;
+    }
+
+    #copyright {
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        font-size: 12px;
+        font-style: italic;
+        opacity: 0.4;
+        color: #fff;
+    }
+
+    #bio_ep_close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        line-height: 16px;
+        z-index: 1000;
+        cursor: pointer;
+
+        &:before {
+            content: "\f00d";
+            font-family: FontAwesome;
+            font-size: 24px;
+        }
+
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    #popup-submit-button {
+        position: relative;
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    //Popup contact form 1
+    #bio_ep {
+        &.popup-top-left {
+            top: 0;
+            left: 0;
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+            max-width: 100vw !important;
+        }
+
+        &.popup-top-right {
+            top: 0;
+            left: unset;
+            right: 0;
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+            max-width: 100vw !important;
+        }
+
+        &.popup-bottom-left {
+            top: unset;
+            bottom: 0;
+            left: 0;
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+            max-width: 100vw !important;
+        }
+
+        &.popup-bottom-right {
+            top: unset;
+            left: unset;
+            bottom: 0;
+            right: 0;
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+            max-width: 100vw !important;
+        }
+
+        &.popup-middle-left {
+            max-width: 100vw !important;
+            left: 0;
+            right: unset;
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            -o-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+        }
+
+        &.popup-middle-right {
+            max-width: 100vw !important;
+            left: unset;
+            right: 0;
+            -webkit-transform: translate(0, -50%);
+            -moz-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+            -o-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+        }
+
+        &.popup-top-center {
+            max-width: 100vw !important;
+            margin: auto;
+            bottom: unset;
+            top: 0;
+            left: 0;
+            right: 0;
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+        }
+
+        &.popup-bottom-center {
+            max-width: 100vw !important;
+            margin: auto;
+            top: unset;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+            transform: translate(0);
+        }
+
+        &.popup-center-center {
+            -webkit-transform: translate(-50%, -50%) scale(1);
+            -moz-transform: translate(-50%, -50%) scale(1);
+            -o-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .popup-content {
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    // Popup id 1
+    .popup-step-2 {
+        height: 300px;
+    }
+
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .popup-step-2 {
+        height: 250px;
+        font-size: 16px;
+    }
+}
+
+@import "template/_contact-form";
+@import "template/_share-social";
+@import "template/_static-form";
+@import "template/_subcribe";
+@import "template/_yesno";
+@import "template/_hot-deal";
+@import "template/lib/_slick";
+@import "template/lib/_slick-theme";

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="style-src">
+            <values>    
+            	<value id="flyout" type="host">https://cdn.minhaloja.com.br</value>        	
+            	<value id="cloudfront" type="host">*.cloudfront.net</value>
+                <value id="fontawesome" type="host">https://use.fontawesome.com</value>
+                <value id="facebook" type="host">https://www.facebook.com</value>
+                <value id="facebookconnect" type="host">https://connect.facebook.net</value>
+                <value id="facebook" type="host">*.facebook.com</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>   
+                <value id="cloudflare" type="host">cloudflare.com</value>
+                <value id="magentocommerce" type="host">*.widgets.magentocommerce.com</value>   
+                <value id="addthis" type="host">https://s7.addthis.com/</value>                
+            </values>
+        </policy>
+        <policy id="script-src">
+            <values>
+            	<value id="flyout" type="host">https://cdn.minhaloja.com.br</value>
+            	<value id="cloudfront" type="host">*.cloudfront.net</value>
+                <value id="fontawesome" type="host">https://use.fontawesome.com</value>
+                <value id="facebook" type="host">https://www.facebook.com</value>
+                <value id="facebookconnect" type="host">https://connect.facebook.net</value>
+                <value id="facebook" type="host">*.facebook.com</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>
+                <value id="addthis" type="host">https://s7.addthis.com/</value>
+                <value id="recaptcha" type="host">https://www.google.com</value>
+                <value id="gstatic" type="host">https://www.gstatic.com</value>
+                <value id="getbutton" type="host">https://static.getbutton.io</value>
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+            	<value id="flyout" type="host">https://cdn.minhaloja.com.br</value>
+            	<value id="cloudfront" type="host">*.cloudfront.net</value>
+                <value id="fontawesome" type="host">https://use.fontawesome.com</value>
+                <value id="facebook" type="host">https://www.facebook.com</value>
+                <value id="facebook" type="host">*.facebook.com</value>
+                <value id="facebookconnect" type="host">https://connect.facebook.net</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>
+                <value id="stats-doubleclick" type="host">https://stats.g.doubleclick.net</value>
+                <value id="googletagmanager" type="host">https://www.googletagmanager.com</value>
+            </values>
+        </policy>     
+        <policy id="connect-src">
+            <values>
+            	<value id="flyout" type="host">https://cdn.minhaloja.com.br</value>
+                <value id="cloudflare" type="host">*.cloudflare.com</value>
+                <value id="twitter.com" type="host">*.twitter.com</value>
+                <value id="paypal" type="host">*.paypal.com</value>
+                <value id="twimg" type="host">*.twimg.com</value>
+                <value id="google.com" type="host">*.google.com</value>
+                <value id="google.co.in" type="host">*.google.co.in</value>
+                <value id="facebook.com" type="host">*.facebook.com</value>
+                <value id="facebook.net" type="host">*.facebook.net</value>
+                <value id="addthis" type="host">https://s7.addthis.com/</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>
+                <value id="getbutton" type="host">https://static.getbutton.io</value>
+                <value id="doubleclick" type="host">https://stats.g.doubleclick.net</value>
+            </values>
+        </policy>
+        <policy id="frame-src">
+            <values>
+            	<value id="flyout" type="host">https://cdn.minhaloja.com.br</value>
+            	<value id="fontawesome" type="host">https://use.fontawesome.com</value>
+                <value id="facebook" type="host">https://www.facebook.com</value>
+                <value id="facebookconnect" type="host">https://connect.facebook.net</value>
+                <value id="facebook" type="host">*.facebook.com</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>
+                <value id="addthis" type="host">https://s7.addthis.com/</value>
+                <value id="getbutton" type="host">https://widget.getbutton.io</value>
+            </values>
+        </policy>
+           
+        <policy id="font-src">
+            <values>
+                <value id="data" type="host">'self' data:</value>
+                <value id="flyout" type="host">https://cdn.minhaloja.com.br</value>
+                <value id="cloudflare" type="host">*.cloudflare.com</value>
+                <value id="twitter.com" type="host">*.twitter.com</value>
+                <value id="google.com" type="host">*.google.com</value>
+                <value id="google.co.in" type="host">*.google.co.in</value>
+                <value id="facebook.com" type="host">*.facebook.com</value>
+                <value id="gstatic" type="host">*.gstatic.com</value>
+                <value id="typekit" type="host">*.typekit.net</value>
+                <value id="twimg" type="host">*.twimg.com</value>
+                <value id="trustedshops" type="host">*.trustedshops.com</value>
+                <value id="googleapis" type="host">*.googleapis.com</value>
+                <value id="bootstapcdn" type="host">*.bootstrapcdn.com</value>
+                <value id="addthis" type="host">https://s7.addthis.com/</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>
+            </values>
+        </policy>
+        <policy id="form-action">
+            <values>
+                <value id="facebookconnect" type="host">https://connect.facebook.net</value>
+                <value id="facebook.com" type="host">*.facebook.com</value>
+                <value id="googleanalytics" type="host">https://www.google-analytics.com</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>
